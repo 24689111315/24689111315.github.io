@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" /> 
-        <title>Hobbies Time Chart</title>
+        <title>Hobbies Chart</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <body>
         <h1>About me</h1>
-        <p>Hello, I am Zoe Gusella. I am a very sporty person, who enjoys physical activity like engaging in sports or mental fitness like reading or studying. As much as I like playing volleyball or dancing, I sometimes also require an indoor activity that does not include movement. This below is a chart to see if my mental fitness balances with my physical activity. Obviously studying takes up much more time of my day than the other extraccurricular activities as it takes up about 6 hours of the overall 24 hours in a day plus about two hours of studying at home. Rather than the mandatory hours dedicated to school, I would say that my activities are balanced.    </p>
+        <p>Hello, I am Zoe Gusella. I am a very sporty person, who enjoys physical activity like engaging in sports or mental fitness like reading or studying. As much as I like playing volleyball or dancing, I sometimes also require an indoor activity that does not involve movement. This below is a chart to see if my mental fitness balances with my physical activity. Obviously studying takes up much more time of my day than the other extraccurricular activities as it takes up about 6 hours of the overall 24 hours in a day plus about two hours of studying at home. Rather than the mandatory hours dedicated to school, I would say that my activities are balanced.    </p>
         
         <div style="width: 70%; margin: auto; padding: 20px;">
         <canvas id="myChart"></canvas>
@@ -40,7 +40,7 @@
                     tooltip: { // additional details about chart elements 
                         callbacks: { // customize behavior of chart 
                             label: function(tooltipItem) { 
-                                return tooltipItem.dataset.label + ': ' + tooltipItem.raw + '%';
+                                return tooltipItem.dataset.label + ': ' + tooltipItem.raw + '%'; // object that holds details like data value, labels: click on reading it shows percentage of time spent on it
                             }
                         }
                     }
@@ -58,8 +58,8 @@
             }
         };
 
-        // Render the chart
-        const ctx = document.getElementById('myChart').getContext('2d'); // 2D
+        // show chart
+        const ctx = document.getElementById('myChart').getContext('2d');
         new Chart(ctx, config); // (content, configuration)
     </script>
     <style>
