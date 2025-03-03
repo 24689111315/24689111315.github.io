@@ -5,40 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            display: flex;              /* Enable Flexbox */
-            justify-content: center;    /* Center horizontally */
-            align-items: center;        /* Center vertically */
-            height: 100vh;              /* Full viewport height */
-            margin: 0;                  /* Remove default margin */
-            background-color: #d28bb2;
-            position: relative;
+            display: flex;              /* Enable Flexbox: container */
+            justify-content: center;    /* horizontal alignment */
+            align-items: center;        /* vertical alignment */
+            height: 100vh;              
+            margin: 0;                  
+            background-color: #d28bb2
          }
             
         /* Create the background with ZG */
         body::before {
-            content: "ZG";  /* Set the text content */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 300px;  /* Size of the background letters */
+            content: "ZG";  
+            position: absolute;  /* positions near the previous object */
+            top: 50%; /* moves element down by 50% of height of containing element */
+            left: 50%; /* moves element right by 50% of height of containing element */
+            transform: translate(-50%, -50%); /* (x,y) - half of width moves horizontally and half vertically - used to center element*/
+            font-size: 300px;  
             font-weight: bold;
             color: rgba(255, 255, 255, 0.); /* Make the color subtle */
-            z-index: -1;  /* Place it behind the content */
-            opacity: 0.2;  /* Optional: Adjust opacity for effect */
+            z-index: -1;  /* Place it behind the title */
+            opacity: 0.2;  /* opacity */
         }
         nav {
             position: fixed;
-            top: 0;
+            top: 0; /* top and left = 0 = positions on the top left corner  */
             left:0;
             width: 100%;
          }
         nav a {
             color: floralwhite;
             font-size: 25px;
-            padding: 10px 20px;
-            margin-right: 15px;
-            transition: all 0.3s ease;
+            padding: 10px 20px; /* creates space between content */
+            margin-right: 10px;
+            transition: all 0.3s ease; /* quick smooth transition effect */
              }
         .content {
             text-align-last: center;
@@ -53,10 +52,13 @@
 <body>
     <h1>Zoe Gusella </h1>
 <nav>
-        <a href="#">Home</a>
+        <a href="Portfolio1.html">Home</a> 
         <a href="About.html">About Me</a>
+        <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
  </nav>
- 
+  
 </body>
 </html>
+ // a above stands for anchor - defines the clickable element that when clicked directs the user to another location   
+// href = Hypertext Reference - specifies the destination when the link is clicked
